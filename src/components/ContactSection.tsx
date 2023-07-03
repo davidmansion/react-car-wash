@@ -73,9 +73,9 @@ export const ContactSection = () => {
                             <div className="relative p-8 bg-white rounded-lg shadow-lg sm:p-12">
                                 <form
                                     data-netlify="true"
-                                    name="contactEmail"
-                                    method="post">
-                                    <input type="hidden" name="form-name" value="contactEmail" />
+                                    name="contact"
+                                    method="POST">
+                                    <input type="hidden" name="form-name" value="contact" />
                                     <ContactInputBox
                                         type="text"
                                         name="name"
