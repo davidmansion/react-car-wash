@@ -73,7 +73,6 @@ export const ContactSection = () => {
                             <div className="relative p-8 bg-white rounded-lg shadow-lg sm:p-12">
                                 <form
                                     data-netlify="true"
-                                    data-netlify-recaptcha="true"
                                     name="contact"
                                     method="POST">
                                     <input type="hidden" name="form-name" value="contact" />
@@ -98,7 +97,6 @@ export const ContactSection = () => {
                                         name="details"
                                         defaultValue=""
                                     />
-                                    <div data-netlify-recaptcha="true"></div>
                                     <div>
                                         <button
                                             type="submit"
