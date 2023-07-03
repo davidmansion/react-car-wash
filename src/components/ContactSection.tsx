@@ -145,6 +145,7 @@ const ContactTextArea: React.FC<ContactTextAreaProps> = ({
                     className="border-[f0f0f0] w-full resize-none rounded border py-3 px-[14px] text-base text-body-color
                      outline-none focus:border-primary focus-visible:shadow-none"
                     defaultValue={defaultValue}
+                    required
                 />
             </div>
         </>
@@ -170,6 +171,7 @@ const ContactInputBox: React.FC<ContactInputBoxProps> = ({
                     placeholder={placeholder}
                     name={name}
                     className="border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-primary focus-visible:shadow-none"
+                    required
                 />
             </div>
         </>
