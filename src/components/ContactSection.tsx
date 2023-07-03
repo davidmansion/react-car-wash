@@ -1,37 +1,17 @@
 import { AiOutlineHome, AiOutlineMail } from "react-icons/ai"
 import { PiPhoneDisconnectBold } from "react-icons/pi"
 import { ContactFormIcons } from "./Icons/ContactFormIcons";
-import { useState } from "react";
-
-const encode = (data: { [x: string]: string | number | boolean; }) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
+import { useEffect, useState } from "react";
 
 export const ContactSection = () => {
 
-    const [state, setState] = useState({ name: '', email: '', message: '' });
+    const [success, setSuccess] = useState(false);
 
-    const handleSubmit = async (e: { preventDefault: () => void; }) => {
-      e.preventDefault();
-  
-      try {
-        await fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encode({ 'form-name': 'contact', ...state }),
-        });
-  
-        alert('Success!');
-      } catch (error) {
-        alert(error);
-      }
-    };
-  
-    const handleChange = (e: { target: { name: any; value: any; }; }) => {
-      setState({ ...state, [e.target.name]: e.target.value });
-    };
+    useEffect(() => {
+        if (window.location.search.includes('success=true')) {
+            setSuccess(true);
+        }
+    }, []);
 
     return (
         <>
@@ -94,8 +74,7 @@ export const ContactSection = () => {
                                 <form
                                     data-netlify="true"
                                     name="contactEmail"
-                                    method="post"
-                                    onSubmit={handleSubmit}>
+                                    method="post">
                                     <input type="hidden" name="form-name" value="contactEmail" />
                                     <ContactInputBox
                                         type="text"
@@ -125,6 +104,9 @@ export const ContactSection = () => {
                                         >
                                             Küldés
                                         </button>
+                                        {success && (
+                                            <p style={{ color: "green" }}>Sikeres küldés! </p>
+                                        )}
                                     </div>
                                 </form>
                                 <div>

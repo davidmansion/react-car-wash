@@ -1,15 +1,7 @@
 import { GiCarSeat } from 'react-icons/gi';
 import { BsCarFrontFill } from 'react-icons/bs';
 
-type ServiceCardData = {
-  title: string;
-  price: string;
-  services: string[];
-  duration: string;
-  icons: React.ReactNode[];
-};
-
-export const ServiceCardData: ServiceCardData[] = [
+export const ServiceCardData = [
   {
     title: 'Külső mosás',
     price: '3 000 HUF-tól',

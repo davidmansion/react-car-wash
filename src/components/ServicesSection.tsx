@@ -1,4 +1,3 @@
-import { BsCarFrontFill } from "react-icons/bs"
 import { Fragment } from "react"
 import { ServiceCardData } from "../assets/ServiceCardData"
 
