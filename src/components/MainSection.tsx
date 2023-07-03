@@ -4,8 +4,11 @@ import { Link } from "react-scroll"
 export const MainSection = () => (
     <>
         <section className="main-bg" id="main-section">
-            <div className="flex flex-col w-full h-full justify-center items-start text-green lg:ml-16">
-                <div className="text-5xl lg:text-8xl">
+            <div className="w-full h-full absolute left-0 top-0 z-0 lg:hidden">
+                <img src="/assets/images/mobile-background.png" alt="mobile background image"/>
+            </div>
+            <div className="flex flex-col w-full h-full justify-center items-start text-green lg:ml-16 relative z-10">
+                <div className="text-5xl lg:text-8xl lg:mt-0 mt-80">
                     <p>Kézi</p>
                     <p className="font-bold">autómosó</p>
                     <p>és <span className="font-bold">kozmetika</span></p>

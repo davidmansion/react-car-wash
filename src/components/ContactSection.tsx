@@ -1,12 +1,42 @@
 import { AiOutlineHome, AiOutlineMail } from "react-icons/ai"
 import { PiPhoneDisconnectBold } from "react-icons/pi"
 import { ContactFormIcons } from "./Icons/ContactFormIcons";
+import { useState } from "react";
+
+const encode = (data: { [x: string]: string | number | boolean; }) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
 
 export const ContactSection = () => {
+
+    const [state, setState] = useState({ name: '', email: '', message: '' });
+
+    const handleSubmit = async (e: { preventDefault: () => void; }) => {
+      e.preventDefault();
+  
+      try {
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode({ 'form-name': 'contact', ...state }),
+        });
+  
+        alert('Success!');
+      } catch (error) {
+        alert(error);
+      }
+    };
+  
+    const handleChange = (e: { target: { name: any; value: any; }; }) => {
+      setState({ ...state, [e.target.name]: e.target.value });
+    };
+
     return (
         <>
             <section className="py-20 lg:py-[120px] overflow-hidden relative z-10 lg:px-16 contact-section">
-                <div className="container">
+                <div>
                     <div className="flex flex-wrap -mx-4 lg:justify-between">
                         <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
                             <div className="mb-12 max-w-[570px] lg:mb-0 text-green">
@@ -61,14 +91,19 @@ export const ContactSection = () => {
                         </div>
                         <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
                             <div className="relative p-8 bg-white rounded-lg shadow-lg sm:p-12">
-                                <form>
+                                <form
+                                    data-netlify="true"
+                                    name="contactEmail"
+                                    method="post"
+                                    onSubmit={handleSubmit}>
+                                    <input type="hidden" name="form-name" value="contactEmail" />
                                     <ContactInputBox
                                         type="text"
                                         name="name"
                                         placeholder="Teljes név"
                                     />
                                     <ContactInputBox
-                                        type="text"
+                                        type="email"
                                         name="email"
                                         placeholder="Email cím"
                                     />
