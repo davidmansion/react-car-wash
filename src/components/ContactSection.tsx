@@ -1,15 +1,29 @@
 import { AiOutlineHome, AiOutlineMail } from "react-icons/ai"
 import { PiPhoneDisconnectBold } from "react-icons/pi"
 import { ContactFormIcons } from "./Icons/ContactFormIcons";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 export const ContactSection = () => {
 
     const [formSubmitted, setFormSubmitted] = useState(false);
 
-    const handleSubmit = (event: { preventDefault: () => void; }) => {
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        setFormSubmitted(true);
+
+        const myForm = event.target as HTMLFormElement;
+        const formData = new FormData(myForm);
+    
+        try {
+          await fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            // @ts-ignore
+            body: new URLSearchParams(formData).toString(),
+          });
+          setFormSubmitted(true);
+        } catch (error) {
+          console.log(error)
+        }
       };
 
     return (
