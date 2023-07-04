@@ -1,7 +1,7 @@
 import { AiOutlineHome, AiOutlineMail } from "react-icons/ai"
 import { PiPhoneDisconnectBold } from "react-icons/pi"
 import { ContactFormIcons } from "./Icons/ContactFormIcons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const ContactSection = () => {
 
