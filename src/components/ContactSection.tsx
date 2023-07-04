@@ -5,13 +5,12 @@ import { useEffect, useState } from "react";
 
 export const ContactSection = () => {
 
-    const [success, setSuccess] = useState(false);
+    const [formSubmitted, setFormSubmitted] = useState(false);
 
-    useEffect(() => {
-        if (window.location.search.includes('success=true')) {
-            setSuccess(true);
-        }
-    }, []);
+    const handleSubmit = (event: { preventDefault: () => void; }) => {
+        event.preventDefault();
+        setFormSubmitted(true);
+      };
 
     return (
         <>
@@ -74,7 +73,10 @@ export const ContactSection = () => {
                                 <form
                                     data-netlify="true"
                                     name="contact"
-                                    method="POST">
+                                    method="POST"
+                                    data-netlify-honeypot="bot-field"
+                                    onSubmit={handleSubmit}
+                                    >
                                     <input type="hidden" name="form-name" value="contact" />
                                     <ContactInputBox
                                         type="text"
@@ -104,8 +106,8 @@ export const ContactSection = () => {
                                         >
                                             Küldés
                                         </button>
-                                        {success && (
-                                            <p style={{ color: "green" }}>Sikeres küldés! </p>
+                                        {formSubmitted  && (
+                                            <p className="text-green">Sikeres küldés! Hamarosan felvesszük Önnel a kapcsolatot.</p>
                                         )}
                                     </div>
                                 </form>
