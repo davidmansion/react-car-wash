@@ -12,19 +12,19 @@ export const ContactSection = () => {
 
         const myForm = event.target as HTMLFormElement;
         const formData = new FormData(myForm);
-    
+
         try {
-          await fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            // @ts-ignore
-            body: new URLSearchParams(formData).toString(),
-          });
-          setFormSubmitted(true);
+            await fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                // @ts-ignore
+                body: new URLSearchParams(formData).toString(),
+            });
+            setFormSubmitted(true);
         } catch (error) {
-          console.log(error)
+            console.log(error)
         }
-      };
+    };
 
     return (
         <>
@@ -90,7 +90,7 @@ export const ContactSection = () => {
                                     method="POST"
                                     data-netlify-honeypot="bot-field"
                                     onSubmit={handleSubmit}
-                                    >
+                                >
                                     <input type="hidden" name="form-name" value="contact" />
                                     <ContactInputBox
                                         type="text"
@@ -114,15 +114,15 @@ export const ContactSection = () => {
                                         defaultValue=""
                                     />
                                     <div>
+                                        {formSubmitted && (
+                                            <p className="text-green text-center">Sikeres küldés! Hamarosan felvesszük Önnel a kapcsolatot.</p>
+                                        )}
                                         <button
                                             type="submit"
                                             className="w-full p-3 text-white transition border rounded border-primary bg-green hover:bg-opacity-90"
                                         >
                                             Küldés
                                         </button>
-                                        {formSubmitted  && (
-                                            <p className="text-green">Sikeres küldés! Hamarosan felvesszük Önnel a kapcsolatot.</p>
-                                        )}
                                     </div>
                                 </form>
                                 <div>

@@ -68,21 +68,23 @@ export const Navbar = () => {
                     </div>
 
                     <Disclosure.Panel className="lg:hidden mr-8 backdrop-blur-md rounded-md mt-2">
-                        <div className="space-y-1 px-2 pb-3 pt-4">
-                            {navigation.map((item) => (
-                                <Link
-                                    key={item.name}
-                                    to={item.href}
-                                    offset={-70}
-                                    duration={500}
-                                    smooth={true}
-                                    spy={true}
-                                    className="rounded-md px-3 py-2 text-md font-medium cursor-pointer"
-                                    activeClass="active"
-                                >
-                                    {item.name}
-                                </Link>
-                            ))}
+                        <div className="px-2 pb-3 pt-4">
+                            <div className="flex justify-center">
+                                {navigation.map((item) => (
+                                    <Link
+                                        key={item.name}
+                                        to={item.href}
+                                        offset={-70}
+                                        duration={500}
+                                        smooth={true}
+                                        spy={true}
+                                        className="rounded-md px-3 py-2 text-md font-medium cursor-pointer"
+                                        activeClass="active"
+                                    >
+                                        {item.name}
+                                    </Link>
+                                ))}
+                            </div>
                             <div className="flex justify-center">
                                 <CallButton />
                             </div>
