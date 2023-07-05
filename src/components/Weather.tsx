@@ -16,7 +16,7 @@ export const Weather = () => {
 
     useEffect(() => {
         handleFetchData();
-    }, [])
+    }, [handleFetchData])
 
     return (
         <div className="absolute top-16 right-2 lg:right-8 z-40 font-bold text-xl md:text-2xl lg:text-4xl text-white">
