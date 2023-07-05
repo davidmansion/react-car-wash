@@ -4,7 +4,7 @@ export const Weather = () => {
     const [temperature, setTemperature] = useState<number | null>(null)
 
     useEffect(() => {
-        const api_url = `https://api.openweathermap.org/data/2.5/weather?lat=47.793&lon=18.960&appid=${process.env.WEATHER_API_KEY}`
+        const api_url = `https://api.openweathermap.org/data/2.5/weather?lat=47.793&lon=18.960&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
         const fetchData = async () => {
           try {
             const response = await fetch(api_url);
