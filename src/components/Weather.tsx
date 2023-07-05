@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
 export const Weather = () => {
-    const [temperature, setTemperature] = useState<number | null>(null)
+    const [temperature, setTemperature] = useState<string | null>(null)
 
     useEffect(() => {
-        const api_url = `https://api.openweathermap.org/data/2.5/weather?lat=47.793&lon=18.960&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
+        const api_url = `https://api.openweathermap.org/data/2.5/weather?lat=47.793&lon=18.960&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
         const fetchData = async () => {
           try {
             const response = await fetch(api_url);
@@ -12,8 +12,9 @@ export const Weather = () => {
               throw new Error('Network response was not ok');
             }
             const data = await response.json();
+            console.log(data)
             if (typeof data.main !== 'undefined') {
-              const celsius = parseInt(data.main.temp) / 10;
+              const celsius = parseFloat(data.main.temp).toFixed(1);
               setTemperature(celsius);
             }
           } catch (error) {
