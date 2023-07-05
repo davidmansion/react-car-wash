@@ -13,7 +13,7 @@ export const Weather = () => {
             }
             const data = await response.json();
             if (typeof data.main !== 'undefined') {
-              const celsius = parseFloat(data.main.temp);
+              const celsius = parseFloat(data.main.temp) / 10;
               setTemperature(celsius);
             }
           } catch (error) {
