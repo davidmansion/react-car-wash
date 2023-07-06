@@ -32,7 +32,7 @@ export const ServiceCardData = [
   },
   {
     title: 'Polírozás',
-    price: '30 000 HUF-tól',
+    price: '35 000 HUF-tól',
     services: ['Külső vízes mosás', 'Több rétegű polírozás', 'Ablaktisztítás'],
     duration: '8 óra',
     icons: [
@@ -41,7 +41,7 @@ export const ServiceCardData = [
   },
   {
     title: 'Lámpapolírozás',
-    price: '10 000 HUF/pár',
+    price: '14 000 HUF/pár',
     services: ['Többrétetű vízes csiszolás', 'Polírozás', 'UV védelemmel való ellátás'],
     duration: '1.5 óra',
     icons: [
@@ -50,7 +50,7 @@ export const ServiceCardData = [
   },
   {
     title: 'Kárpittisztítás',
-    price: '25 000 HUF-tól',
+    price: '26 000 HUF-tól',
     services: ['Műanyagápolás', 'Bőr és kárpittisztítás gőzzel', 'Porszívózás', 'Ablaktisztítás', 'Portörlés'],
     duration: '8 óra',
     icons: [
