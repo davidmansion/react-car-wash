@@ -29,7 +29,7 @@ export const ServicesSection = () => {
                                 <div className="mt-auto">
                                     <p className="text-gray-500 font-semibold">Várható időtartam: {serviceCard.duration}</p>
                                 </div>
-                                <div>
+                                <div className="relative">
                                     {serviceCard.icons.map((icon, index) => (
                                         <Fragment key={index}>
                                             {icon}
