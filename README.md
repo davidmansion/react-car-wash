@@ -10,4 +10,5 @@
  - React
  - Tailwind
  - Netlify for deploy and environment variables
+ - Openweathermap API
  
