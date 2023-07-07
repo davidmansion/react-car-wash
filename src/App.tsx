@@ -1,5 +1,6 @@
 import { ContactSection } from "./components/ContactSection";
 import { FooterSection } from "./components/FooterSection";
+import { GallerySection } from "./components/GallerySection";
 import { MainSection } from "./components/MainSection";
 import { MapSection } from "./components/MapSection";
 import { Navbar } from "./components/Navbar";
@@ -15,6 +16,7 @@ const App = () => (
         <MainSection />
         <ServicesSection />
         <TestimonialSection />
+        <GallerySection />
         <ContactSection />
         <MapSection />
         <FooterSection />
