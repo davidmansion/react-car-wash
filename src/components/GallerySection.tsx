@@ -3,12 +3,15 @@ import Lightbox from 'yet-another-react-lightbox';
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Counter from "yet-another-react-lightbox/plugins/counter";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/counter.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 export const GallerySection = () => {
-    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [isOpen, setIsOpen] = useState<boolean>(false)
     const [imageIndex, setImageIndex] = useState<number>(0)
+
 
     const handleImageClick = (imageId: number) => {
         setIsOpen(true)
@@ -26,38 +29,38 @@ export const GallerySection = () => {
     const images: ImageProps[] = [
         {
             id: 1,
-            src: "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp",
+            src: "assets/images/gallery_1.jpg",
             animation: "fade-right",
             animationDelay: 200
         },
         {
             id: 2,
-            src: "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp",
+            src: "assets/images/gallery_2.jpg",
             animation: "fade-right",
         },
         {
             id: 3,
-            src: "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp",
+            src: "assets/images/gallery_5.jpg",
             large: true,
             animation: "fade-right",
             animationDelay: 400
         },
         {
             id: 4,
-            src: "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp",
+            src: "assets/images/gallery_6.jpg",
             large: true,
             animation: "fade-left",
             animationDelay: 200
         },
         {
             id: 5,
-            src: "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp",
+            src: "assets/images/gallery_3.jpg",
             animation: "fade-left",
             animationDelay: 400
         },
         {
             id: 6,
-            src: "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp",
+            src: "assets/images/gallery_4.jpg",
             animation: "fade-left",
             animationDelay: 500
         }
@@ -70,9 +73,9 @@ export const GallerySection = () => {
                 index={imageIndex}
                 close={() => setIsOpen(false)}
                 slides={images}
-                plugins={[Fullscreen, Zoom, Counter]}
+                plugins={[Fullscreen, Zoom, Counter, Thumbnails]}
             />
-            <div className='mt-16 lg:px-16 px-4 testimonial-section'>
+            <section className='mt-16 lg:px-16 px-4 gallery-section'>
                 <h2 className="text-green mb-6 lg:text-5xl text-3xl font-bold uppercase">
                     Referenciák
                 </h2>
@@ -114,7 +117,7 @@ export const GallerySection = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     )
 }

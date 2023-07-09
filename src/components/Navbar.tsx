@@ -7,8 +7,8 @@ import { CallButton } from "./CallButton"
 export const Navbar = () => {
 
     const navigation = [
-        { name: 'Főoldal', href: 'main-section', current: true },
         { name: 'Szolgáltatások', href: 'services-section', current: false },
+        { name: 'Referenciák', href: 'gallery-section', current: false },
         { name: 'Kapcsolat', href: 'contact-section', current: false },
     ]
 
