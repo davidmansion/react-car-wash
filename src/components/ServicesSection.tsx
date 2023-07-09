@@ -4,7 +4,7 @@ import { ServiceCardData } from "../assets/ServiceCardData"
 export const ServicesSection = () => {
 
     return (
-        <section className="mt-16 lg:px-16 services-section">
+        <section className="mt-16 lg:px-16 px-4 services-section">
             <h2 className="text-green mb-6 lg:text-5xl text-3xl font-bold uppercase">
                 Szolgáltatások
             </h2>
@@ -13,7 +13,9 @@ export const ServicesSection = () => {
 
                     {ServiceCardData.map((serviceCard, index) => (
                         <Fragment key={index}>
-                            <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow drop-shadow-lg flex flex-col">
+                            <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow drop-shadow-lg flex flex-col"
+                                data-aos="fade-right"
+                                data-aos-delay={index * 100}>
                                 <div>
                                     <h5 className="mb-2 text-3xl font-semibold tracking-tight text-gray-900">{serviceCard.title}</h5>
                                     <h5 className="mb-2 text-xl font-semibold tracking-tight text-gray-700">{serviceCard.price}</h5>

@@ -1,6 +1,6 @@
 export const MapSection = () => (
     <>
-        <div className="relative w-full h-[400px] lg:px-16">
+        <div className="relative w-full h-[400px] lg:px-16 px-4" data-aos="fade-up">
             <div className="w-full h-[400px]">
                 <iframe className="rounded-2xl" width="100%" height={400} title="Google maps"
                     src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Nagymaros,

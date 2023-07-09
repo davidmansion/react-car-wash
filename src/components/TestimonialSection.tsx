@@ -4,12 +4,12 @@ import { HiMiniArrowsRightLeft } from "react-icons/hi2"
 import { BiSprayCan } from "react-icons/bi"
 
 export const TestimonialSection = () => (
-    <section className="mt-16 lg:px-16 testimonial-section">
+    <section className="mt-16 lg:px-16 px-4 testimonial-section">
         <h2 className="text-green mb-6 lg:text-5xl text-3xl font-bold uppercase">
             Miért válasszon minket?
         </h2>
 
-        <div className="container my-24 mx-auto md:px-6 grid gap-x-6 md:grid-cols-4 lg:gap-x-12">
+        <div className="container my-24 mx-auto md:px-6 grid gap-x-6 md:grid-cols-4 lg:gap-x-12" data-aos="fade-up">
             <div className="mb-12 md:mb-0">
                 <div className="mb-6 flex justify-center">
                     <AiOutlineFieldTime className="w-32 h-32 text-green opacity-75" />

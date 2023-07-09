@@ -28,10 +28,10 @@ export const ContactSection = () => {
 
     return (
         <>
-            <section className="py-20 lg:py-[120px] overflow-hidden relative z-10 lg:px-16 contact-section">
+            <section className="py-20 lg:py-[120px] overflow-hidden relative z-10 lg:px-16 p-4 contact-section">
                 <div>
                     <div className="flex flex-wrap -mx-4 lg:justify-between">
-                        <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
+                        <div className="w-full px-4 lg:w-1/2 xl:w-6/12" data-aos="fade-right">
                             <div className="mb-12 max-w-[570px] lg:mb-0 text-green">
                                 <h2 className="text-green mb-6 lg:text-5xl text-3xl font-bold uppercase">
                                     Kapcsolat
@@ -82,7 +82,7 @@ export const ContactSection = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
+                        <div className="w-full px-4 lg:w-1/2 xl:w-5/12"  data-aos="fade-left">
                             <div className="relative p-8 bg-white rounded-lg shadow-lg sm:p-12">
                                 <form
                                     data-netlify="true"
