@@ -39,7 +39,7 @@ export const Navbar = () => {
                                     smooth={true}
                                     spy={true}
                                 >
-                                    Maros-Wax
+                                    BVL Hand Car Wash
                                 </Link>
                             </div>
                             <div className="flex flex-1 items-end justify-end sm:items-stretch">
