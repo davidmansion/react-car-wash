@@ -16,8 +16,8 @@ export const MainSection = () => {
                         <p>and <span className="font-bold">cosmetics</span></p>
                     </div>
                     <div className="mt-2 text-xl" data-aos="fade-right" data-aos-delay="300">
-                        <p>Szolgáltatásainkról minden részletes információt megtalál</p>
-                        <p>az alábbi menüpont alatt.</p>
+                        <p>You will find all the detailed information about our services</p>
+                        <p>under the menu item below.</p>
                     </div>
                     <div data-aos="fade-right" data-aos-delay="600">
                         <Link
@@ -29,7 +29,7 @@ export const MainSection = () => {
                         >
                             <button className="flex items-center bg-green text-white text-lg font-bold p-3 px-4
                      rounded-full mt-4 hover:bg-white hover:text-green border transition ease-in-out duration-300 hover:border-green">
-                                Szolgáltatások
+                                Services
                                 <BsArrowRightShort className="w-6 h-6 mt-1" />
                             </button>
                         </Link>
