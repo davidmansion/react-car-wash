@@ -13,7 +13,7 @@ export const MainSection = () => {
                     <div className="text-5xl lg:text-8xl lg:mt-0 md:mt-96 mt-64" data-aos="fade-right">
                         <p>Hand</p>
                         <p className="font-bold">car wash</p>
-                        <p>és <span className="font-bold">and cosmetics</span></p>
+                        <p>and <span className="font-bold">cosmetics</span></p>
                     </div>
                     <div className="mt-2 text-xl" data-aos="fade-right" data-aos-delay="300">
                         <p>Szolgáltatásainkról minden részletes információt megtalál</p>
