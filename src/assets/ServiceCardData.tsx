@@ -5,7 +5,7 @@ export const ServiceCardData = [
   {
     title: 'BRONZE Outside only',
     price: ['Small Car £6', 'Medium Car £8', 'Large/Luxury/4x4'],
-    services: ['Külső vízes mosás', 'Ablaktisztítás', 'Kerékápolás'],
+    services: ['Hand shampoo, wax rinse and hand dried', 'External glass polished', 'Tyres dressed'],
     duration: '40 perc',
     icons: [
       <BsCarFrontFill className="absolute bottom-8 right-2 w-52 h-52 opacity-5 text-green" />,
