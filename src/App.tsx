@@ -3,7 +3,7 @@ import { ContactSection } from "./components/ContactSection";
 import { FooterSection } from "./components/FooterSection";
 import { GallerySection } from "./components/GallerySection";
 import { MainSection } from "./components/MainSection";
-import { MapSection } from "./components/MapSection";
+//import { MapSection } from "./components/MapSection";
 import { Navbar } from "./components/Navbar";
 import { ServicesSection } from "./components/ServicesSection";
 import { TestimonialSection } from "./components/TestimonialSection";
