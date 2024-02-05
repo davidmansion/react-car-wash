@@ -25,7 +25,7 @@ const App = () => {
       <TestimonialSection />
       <GallerySection />
       <ContactSection />
-      <MapSection />
+      //<MapSection />
       <FooterSection />
     </div>
   )
