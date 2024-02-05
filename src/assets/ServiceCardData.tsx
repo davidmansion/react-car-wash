@@ -3,8 +3,8 @@ import { BsCarFrontFill } from 'react-icons/bs';
 
 export const ServiceCardData = [
   {
-    title: 'Külső mosás',
-    price: '3 000 HUF-tól',
+    title: 'BRONZE Outside only',
+    price: ['Small Car £6', 'Medium Car £8', 'Large/Luxury/4x4'],
     services: ['Külső vízes mosás', 'Ablaktisztítás', 'Kerékápolás'],
     duration: '40 perc',
     icons: [
