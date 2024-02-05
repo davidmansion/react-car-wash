@@ -11,9 +11,9 @@ export const MainSection = () => {
                 </div>
                 <div className="flex flex-col w-full h-full justify-center items-start text-green ml-4 lg:ml-16 relative z-10">
                     <div className="text-5xl lg:text-8xl lg:mt-0 md:mt-96 mt-64" data-aos="fade-right">
-                        <p>Kézi</p>
-                        <p className="font-bold">autómosó</p>
-                        <p>és <span className="font-bold">kozmetika</span></p>
+                        <p>Hand</p>
+                        <p className="font-bold">car wash</p>
+                        <p>és <span className="font-bold">and cosmetics</span></p>
                     </div>
                     <div className="mt-2 text-xl" data-aos="fade-right" data-aos-delay="300">
                         <p>Szolgáltatásainkról minden részletes információt megtalál</p>
